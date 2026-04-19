@@ -93,3 +93,9 @@ check: fmt vet lint
 help:
 	@echo "Usage: make [target]"
 	@grep -E '^## ' Makefile | sed 's/## /  /'
+
+## watch: Rebuild automatically on file changes (requires entr)
+# Usage: find . -name '*.go' | entr make watch
+watch:
+	@echo "Watching for changes..."
+	find . -name '*.go' | entr -r make run
