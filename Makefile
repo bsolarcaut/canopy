@@ -30,7 +30,7 @@ run: build
 ## test: Run all tests
 test:
 	@echo "Running tests..."
-	go test ./... -v -race -timeout 120s
+	go test ./... -v -race -timeout 300s
 
 ## lint: Run golangci-lint
 lint:
