@@ -21,7 +21,7 @@ func main() {
 	// Parse command-line flags
 	configPath := flag.String("config", "", "path to config file (default: $HOME/.canopy/config.json)")
 	dataDir := flag.String("data-dir", "", "path to data directory (default: $HOME/.canopy)")
-	logLevel := flag.String("log-level", "debug", "log level: debug, info, warn, error") // changed default to debug for easier local dev
+	logLevel := flag.String("log-level", "info", "log level: debug, info, warn, error")
 	showVersion := flag.Bool("version", false, "print version information and exit")
 	flag.Parse()
 
