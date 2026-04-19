@@ -76,7 +76,8 @@ logs:
 clean:
 	@echo "Cleaning build artifacts..."
 	@rm -rf $(BUILD_DIR)
-	go clean -cache
+	# Note: skipping go clean -cache to preserve module cache between builds
+	go clean
 
 ## deps: Download and tidy Go modules
 deps:
