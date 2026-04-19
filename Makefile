@@ -85,6 +85,10 @@ deps:
 	go mod download
 	go mod tidy
 
+## check: Run fmt, vet, and lint in sequence (useful before committing)
+check: fmt vet lint
+	@echo "All checks passed."
+
 ## help: Show this help message
 help:
 	@echo "Usage: make [target]"
