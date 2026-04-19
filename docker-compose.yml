@@ -15,7 +15,7 @@ services:
       - canopy-data:/root/.canopy
     environment:
       - CANOPY_ENV=${CANOPY_ENV:-mainnet}
-      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - LOG_LEVEL=${LOG_LEVEL:-debug}
     networks:
       - canopy-net
 
@@ -29,7 +29,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - canopy-data:/root/.canopy
     environment:
-      - UPDATE_INTERVAL=${UPDATE_INTERVAL:-3600}
+      - UPDATE_INTERVAL=${UPDATE_INTERVAL:-7200}
       - CANOPY_IMAGE=${CANOPY_IMAGE:-canopy}
       - GITHUB_REPO=${GITHUB_REPO:-canopy-network/canopy}
     depends_on:
