@@ -32,6 +32,11 @@ test:
 	@echo "Running tests..."
 	go test ./... -v -race -timeout 300s
 
+## test-short: Run tests without -race for faster local iteration
+test-short:
+	@echo "Running tests (short)..."
+	go test ./... -timeout 120s
+
 ## lint: Run golangci-lint
 lint:
 	@echo "Running linter..."
